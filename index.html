@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta char="utf-8">
+		<title>Learning Mustache</title>
+	</head>
+	<body>
+		<div class="content">
+		</div>
+
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/mustache.js"></script>		
+		<script type="text/javascript" src="js/templates.js"></script>
+		<script type="text/javascript">
+		/* A working example of how to use templates from an external file*/
+			var people = {
+					th1: "Name",
+					th2: "Job",
+					person: {
+						name: "Morgan",
+						occupation: "Pirate"
+					}
+				};
+
+			var template = Juan.template.database,
+				output = Mustache.render(template, people);
+
+			$('.content').html(output);
+		</script>
+	</body>
+</html>
